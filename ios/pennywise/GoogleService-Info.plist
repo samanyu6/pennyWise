@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>369062856526-knt5l1ojrtqegl518e3ie2vke1apbbju.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.369062856526-knt5l1ojrtqegl518e3ie2vke1apbbju</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>369062856526-giha6sh281rk5ks5pvvs6n9qlhigjptm.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDGSLdTTyhyNhCi2aXq17pWaqjEdkfxuNY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>369062856526</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.pennywise.samanyu.com</string>
+	<key>PROJECT_ID</key>
+	<string>pennywise-9638f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>pennywise-9638f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:369062856526:ios:de22e9e070d3e692eac01f</string>
+	<key>DATABASE_URL</key>
+	<string>https://pennywise-9638f.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { View,Text, TouchableOpacity} from 'react-native';
+import Icon from 'react-native-vector-icons/Entypo';
 
 import Wallets from '../Home/Wallets';
 import Settings from '../Home/Settings';
@@ -53,9 +54,18 @@ function MyTabBar({ state, descriptors, navigation }) {
               onLongPress={onLongPress}
               style={{ flex: 1 }}
             >
-              <Text style={{ color: isFocused ? 'black' : 'grey' }}>
-                {label}
-              </Text>
+              <Icon 
+                  name={label}
+                  size={32}
+                  style={{ 
+                    color: isFocused ? 'black' : 'grey',
+                    shadowColor: 'black',
+                    shadowOpacity: 0.3,
+                    shadowOffset: { height: 5, width: 2 },
+                    shadowRadius: 20,
+                  }}
+              />
+                {/* {label} */}
             </TouchableOpacity>
           );
         })}
@@ -70,9 +80,9 @@ function BottomTab(){
             initialRouteName="Wallet"
             tabBar={props => <MyTabBar {...props} />}
         >
-            <Tab.Screen name="Wallet" component={Wallets}/>
-            <Tab.Screen name="Expense" component={Expense}/>
-            <Tab.Screen name="Settings" component={Settings}/>
+            <Tab.Screen name="credit-card" component={Wallets}/>
+            <Tab.Screen name="bar-graph" component={Expense}/>
+            <Tab.Screen name="cog" component={Settings}/>
         </Tab.Navigator>
     )
 }

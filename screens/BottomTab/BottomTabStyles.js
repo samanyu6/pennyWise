@@ -5,7 +5,7 @@ export default styles= StyleSheet.create({
 
     mainView:{
         flexDirection: 'row',
-        paddingLeft: wp('12%'),
+        paddingLeft: wp('15%'),
         height:hp('10%'),
         marginBottom: hp('2.5%'),
         width: wp('90%'),

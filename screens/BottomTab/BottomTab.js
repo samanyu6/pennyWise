@@ -3,9 +3,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { View,Text, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
 
-import Wallets from '../Home/Wallets';
-import Settings from '../Home/Settings';
-import Expense from '../Home/Expense';
+import Wallets from '../Home/Wallets/Wallets';
+import Settings from '../Home/Settings/Settings';
+import Expense from '../Home/Expense/Expense';
 import styles from './BottomTabStyles';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -13,7 +13,7 @@ const Tab = createBottomTabNavigator();
 
 function MyTabBar({ state, descriptors, navigation }) {
     return (
-      <SafeAreaView>
+      <SafeAreaView style={styles.rootView}>
       <View style={styles.mainView}>
         {state.routes.map((route, index) => {
           const { options } = descriptors[route.key];
@@ -60,8 +60,8 @@ function MyTabBar({ state, descriptors, navigation }) {
                   style={{ 
                     color: isFocused ? 'black' : 'grey',
                     shadowColor: 'black',
-                    shadowOpacity: 0.3,
-                    shadowOffset: { height: 5, width: 2 },
+                    shadowOpacity: 0.4,
+                    shadowOffset: { height: 10, width: 2 },
                     shadowRadius: 20,
                   }}
               />

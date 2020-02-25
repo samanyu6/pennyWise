@@ -32,7 +32,6 @@ const App = () => {
 
   const onBeforeLift=()=>{
       setLog(store.getState().userData.status);
-      console.log(log)
   }
 
   return (

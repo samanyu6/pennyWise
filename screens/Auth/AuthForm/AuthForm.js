@@ -96,6 +96,7 @@ function LoginScreen({navigation}){
                     var res = await auth().signInWithEmailAndPassword(user,pass);
                     setLoad(false)
                     try{
+                        console.log(res.user)
                         dispatch({type: 'LOGGEDIN', payload: res})
                         showMessage({
                            message: '',
@@ -179,7 +180,7 @@ function LoginScreen({navigation}){
             <FlashMessage 
                 position="bottom" 
                 animationDuration = {300}
-                duration = {999}
+                duration = {900}
                 textStyle={{
                     fontWeight: '700',
                     fontSize: 18,

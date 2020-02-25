@@ -6,42 +6,57 @@
  * @flow
  */
 // Navigation and stuff
-import React, { useState, useEffect, createContext } from 'react';
+import React, { useEffect, useState } from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import AsyncStorage from '@react-native-community/async-storage';
 
 //Screens
-import BottomTab from './screens/BottomTab';
+import BottomTab from './screens/BottomTab/BottomTab';
 import AuthForm from './screens/Auth/AuthForm/AuthForm';
 import AuthFirst  from './screens/Auth/AuthFirst/AuthFirst';
 
 //Redux Stuff
-import { Provider, useSelector } from 'react-redux';
+import { Provider} from 'react-redux';
 import {store, persistor} from './redux/configureStore';
 import {PersistGate} from 'redux-persist/integration/react'
+import { persistStore } from 'redux-persist';
 
 //Import actions,Reducers
 //Create Navigation
 const Stack = createStackNavigator();
+
 //Export main App
 const App = () => {
 
+  const [log , setLog] = useState('');
+
+  const onBeforeLift=()=>{
+      setLog(store.getState().userData.status);
+      console.log(log)
+  }
+
   return (
-      <Provider store={store}>
-        <PersistGate persistor={persistor} loading={null}>
-            <NavigationContainer>
-                <Stack.Navigator
-                    headerMode={false}
-                    initialRouteName = {(store.getState().userData.status==='LOGGEDOUT')?"AuthFirst":"Home"}
+      <PersistGate 
+          persistor={persistor} 
+          loading={
+            // <LoadScreen/>
+            null
+          }
+          onBeforeLift={onBeforeLift}
+      >
+        <Provider store={store}>
+              <NavigationContainer>
+                  <Stack.Navigator
+                      headerMode={false}
+                      initialRouteName = {(log==='LOGGEDOUT')?"AuthFirst":"Home"}
                   >
-                    <Stack.Screen name="AuthForm" component={AuthForm}/>
-                    <Stack.Screen name="AuthFirst" component={AuthFirst}/>
-                    <Stack.Screen name="Home" component={BottomTab} />
-                </Stack.Navigator>
-            </NavigationContainer>
-        </PersistGate> 
-      </Provider>
+                      <Stack.Screen name="AuthForm" component={AuthForm}/>
+                      <Stack.Screen name="AuthFirst" component={AuthFirst}/>
+                      <Stack.Screen name="Home" component={BottomTab} />
+                  </Stack.Navigator>
+              </NavigationContainer>
+          </Provider>
+      </PersistGate> 
     );
   // }
 };

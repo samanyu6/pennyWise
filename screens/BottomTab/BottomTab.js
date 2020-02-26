@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { View,Text, TouchableOpacity} from 'react-native';
+import { View,Platform, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
 
 import Wallets from '../Home/Wallets/Wallets';
@@ -57,15 +57,13 @@ function MyTabBar({ state, descriptors, navigation }) {
               <Icon 
                   name={label}
                   size={32}
-                  style={{ 
-                    color: isFocused ? 'black' : 'grey',
-                    shadowColor: 'black',
-                    shadowOpacity: 0.4,
-                    shadowOffset: { height: 10, width: 2 },
-                    shadowRadius: 20,
-                  }}
+                  style={{color: isFocused ? 'black' : 'grey',
+                  shadowColor: 'black',
+                  shadowOpacity: 0.2,
+                  shadowOffset: { height: 2.5, width: 0 },
+                  shadowRadius: 20,
+                  elevation: 20,}}
               />
-                {/* {label} */}
             </TouchableOpacity>
           );
         })}

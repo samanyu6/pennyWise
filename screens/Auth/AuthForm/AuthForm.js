@@ -2,7 +2,7 @@ import React, {useState, useEffect, useCallback} from 'react';
 import { View, SafeAreaView, Dimensions, KeyboardAvoidingView, Keyboard} from 'react-native';
 import {CustomButton} from '../../../components/button';
 import * as Animatable from 'react-native-animatable';
-import { TextInput } from 'react-native-gesture-handler';
+import { TextInput, ScrollView } from 'react-native-gesture-handler';
 import FlashMessage,{showMessage} from "react-native-flash-message";
 import auth from '@react-native-firebase/auth';
 import {useSelector, useDispatch} from 'react-redux';
@@ -141,7 +141,7 @@ function LoginScreen({navigation}){
     return(
         <View style={styles.mainView}>
             <SafeAreaView>
-                <KeyboardAvoidingView>
+                <KeyboardAvoidingView behavior="position" keyboardVerticalOffset={styles.verticalOffset}>
                 <Animatable.Text animation="fadeIn" delay={200} useNativeDriver={true} style={styles.header}>
                     {title}
                 </Animatable.Text>
@@ -154,6 +154,7 @@ function LoginScreen({navigation}){
                         value = {user}
                         autoCompleteType = 'email'
                         style = {styles.textStyleEmail}
+                        placeholderTextColor= "grey"
                     />
                     <TextInput
                         placeholder="Enter Password"
@@ -162,6 +163,7 @@ function LoginScreen({navigation}){
                         value = {pass}
                         autoCompleteType = 'password'
                         style = {styles.textStylePass}
+                        placeholderTextColor="grey"
                     />
                     <CustomButton
                         title= {title}

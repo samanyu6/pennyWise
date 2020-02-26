@@ -1,6 +1,7 @@
 
 
 import {StyleSheet} from 'react-native'
+import {heightPercentageToDP as hp , widthPercentageToDP as wp} from 'react-native-responsive-screen'
 
 export default styles= StyleSheet.create({
     mainView:{
@@ -9,7 +10,7 @@ export default styles= StyleSheet.create({
     },
 
     header:{
-        fontSize: 58,
+        fontSize: hp('9'),
         fontFamily: 'Montserrat-Bold',
         textAlign: 'left',
         padding: '5%'
@@ -19,11 +20,11 @@ export default styles= StyleSheet.create({
         fontSize: 18,
         fontFamily: 'Montserrat-SemiBold',
         textAlign: 'left',
-        paddingLeft: '6%'
+        paddingLeft: wp('6%')
     },
 
     buttonView:{
-        height: '80%',
+        height: hp('80%'),
         flexDirection: 'column',
         justifyContent: 'space-evenly',
         alignContent: 'center',
@@ -31,6 +32,6 @@ export default styles= StyleSheet.create({
     },
 
     button:{
-        marginTop: '20%'
+        marginTop: hp('20%')
     }
 });

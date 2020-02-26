@@ -1,31 +1,34 @@
 
 import {StyleSheet, Platform} from 'react-native';
+import {heightPercentageToDP as hp , widthPercentageToDP as wp} from 'react-native-responsive-screen'
+
+const OS = Platform.OS;
 
 export default styles= StyleSheet.create({
     mainView:{
-        height: '100%',
+        height: hp('100%'),
         backgroundColor: 'white',
         fontFamily: 'Montserrat-SemiBold'
     },
 
     header:{
-        fontSize: 58,
+        fontSize: hp('9'),
         fontWeight: 'bold',
         textAlign: 'left',
-        padding: '5%',
+        padding: wp('5%'),
         fontFamily: 'Montserrat-Black'
     },
 
     body:{
         padding: '10%',
-        height: '80%',
+        height: hp('80%'),
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center'
     },
 
     textStyleEmail:{
-        borderWidth: 0.25,
+        borderWidth: (OS==='ios'?0.25:0.2),
         borderColor: 'black',
         margin: 5,
         padding: 15,
@@ -36,11 +39,12 @@ export default styles= StyleSheet.create({
         fontWeight: 'bold',
         elevation: 1,
         margin: '5%',
+        color: 'black',
         fontFamily: 'Montserrat-SemiBold'
     },
 
     textStylePass:{
-        borderWidth: 0.25,
+        borderWidth: (OS==='ios'?0.25:0.2),
         borderColor: 'black',
         margin: 5,
         padding: 15,
@@ -52,6 +56,9 @@ export default styles= StyleSheet.create({
         elevation: 1,
         margin: '5%',
         marginBottom: '10%' ,
-        fontFamily: 'Montserrat-SemiBold'
-    }
+        fontFamily: 'Montserrat-SemiBold',
+        color: 'black'
+    },
+
+    verticalOffset: hp('50')
 })

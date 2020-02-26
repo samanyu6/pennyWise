@@ -1,5 +1,7 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+
+const OS = Platform.OS;
 
 export default styles= StyleSheet.create({
 
@@ -22,7 +24,8 @@ export default styles= StyleSheet.create({
 
     rootView:{
         backgroundColor: 'white',
-        height: hp('20%')
-    }
+        height: hp('20%'),
+        justifyContent: 'center'
+    },
 
 })

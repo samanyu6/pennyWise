@@ -6,12 +6,13 @@ const OS = Platform.OS;
 export default styles= StyleSheet.create({
 
     mainView:{
+        // marginTop: hp('2.5%'),
         flexDirection: 'row',
         paddingLeft: wp('15%'),
         height:hp('10%'),
-        marginBottom: hp('2.5%'),
-        width: wp('90%'),
-        alignSelf: 'center',
+        // marginBottom: hp('2.5%'),
+        width: wp('85%'),
+        // alignSelf: 'center',
         alignItems: 'center',
         borderRadius: wp('5%'),
         backgroundColor: 'white',
@@ -23,9 +24,11 @@ export default styles= StyleSheet.create({
     },
 
     rootView:{
+        position: 'absolute',
         backgroundColor: 'white',
-        height: hp('20%'),
-        justifyContent: 'center'
+        height: 0,
+        top: hp('85%'),
+        alignSelf: 'center'
     },
 
 })

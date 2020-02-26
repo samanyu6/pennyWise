@@ -13,7 +13,7 @@ const Tab = createBottomTabNavigator();
 
 function MyTabBar({ state, descriptors, navigation }) {
     return (
-      <SafeAreaView style={styles.rootView}>
+      <View style={styles.rootView}>
       <View style={styles.mainView}>
         {state.routes.map((route, index) => {
           const { options } = descriptors[route.key];
@@ -68,7 +68,7 @@ function MyTabBar({ state, descriptors, navigation }) {
           );
         })}
       </View>
-      </SafeAreaView>
+      </View>
     );
 }
 

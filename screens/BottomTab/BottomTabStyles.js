@@ -9,7 +9,7 @@ export default styles= StyleSheet.create({
         // marginTop: hp('2.5%'),
         flexDirection: 'row',
         paddingLeft: wp('15%'),
-        height:hp('10%'),
+        height: (OS==='ios')?hp('10%'):hp('12.5%'),
         // marginBottom: hp('2.5%'),
         width: wp('85%'),
         // alignSelf: 'center',
@@ -20,15 +20,10 @@ export default styles= StyleSheet.create({
         shadowOpacity: 0.2,
         shadowOffset: { height: 2.5, width: 0 },
         shadowRadius: 20,
-        elevation: 20,
-    },
-
-    rootView:{
+        elevation: 20, 
         position: 'absolute',
-        backgroundColor: 'white',
-        height: 0,
-        top: hp('85%'),
-        alignSelf: 'center'
+        top: OS==='ios'?hp('85%'):hp('80%'),
+        alignSelf: 'center',
     },
 
 })

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 import styles from './WalletStyles';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { FlatList, ScrollView } from 'react-native-gesture-handler';
+import { FlatList } from 'react-native-gesture-handler';
 import getColor from '../../../components/randColor';
+import ActionButton from '../../../components/floatingAction';
 
 const data = [
     {
@@ -21,38 +22,44 @@ const data = [
     title: 'Third Item',
     color: getColor()
   },
+//   {
+//     id: '58694a0f-3da1-471f-bd96-145571e29d42',
+//     title: 'Fourth Item',
+//     color: getColor()
+//   }
 ]
 
-function _renderItem(item){
+function _renderItem(item, navigation){
     return(
-        <View style={styles.mainView}>
-            <View style={[styles.card,{backgroundColor: item.item.color}]}>
+        <TouchableOpacity onPress={()=> {
+                navigation.navigate('DetailsWallet', { params: item.item })
+        }}>
+            <View style={[styles.card,{backgroundColor: item.item.color, shadowColor: item.item.color}]}>
                 <Text style={styles.cardHeader}>SBI</Text>
                 <Text style={styles.cardMid}>$ 15,000</Text>
             </View>
-            <View style={styles.detailsCard}>
-                <Text style={styles.cardHeader}>{item.title}</Text>
-                <Text style={styles.cardMid}>{item.id}</Text>
-            </View>
-        </View>
+        </TouchableOpacity>
     )
 }
 
 const Wallet = ({navigation}) => {
     return (
-        <ScrollView style={styles.rootView} showsVerticalScrollIndicator={false}>
+        <View style={{backgroundColor: 'white', flex: 1}}>
             <SafeAreaView>
-            <Text style={styles.headerText}>Wallets</Text>
+                <Text style={styles.headerText}>Wallets</Text>
             </SafeAreaView>
-                <FlatList
-                    data={data}
-                    renderItem = {(item)=>_renderItem(item)}
-                    horizontal={true}
-                    keyExtractor = {(item)=>item.id}
-                    style={styles.flatList}
-                    showsHorizontalScrollIndicator={false}
-                />  
-        </ScrollView>
+            <FlatList
+                data={data}
+                renderItem = {(item)=>_renderItem(item, navigation)}
+                keyExtractor = {(item)=>item.id}
+                style={styles.flatList}
+                showsHorizontalScrollIndicator={false}
+            /> 
+            <ActionButton
+                icon="plus"
+                navigate="details"
+            />
+        </View>
     )
 }
 

@@ -7,7 +7,8 @@ import FlashMessage,{showMessage} from "react-native-flash-message";
 import auth from '@react-native-firebase/auth';
 import {useSelector, useDispatch} from 'react-redux';
 import styles from './AuthFormStyle';
-import AsyncStorage from '@react-native-community/async-storage';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+
 
 function LoginScreen({navigation}){
 
@@ -141,7 +142,7 @@ function LoginScreen({navigation}){
     return(
         <View style={styles.mainView}>
             <SafeAreaView>
-                <KeyboardAvoidingView behavior="position" keyboardVerticalOffset={styles.verticalOffset}>
+                <KeyboardAwareScrollView behavior="position">
                 <Animatable.Text animation="fadeIn" delay={200} useNativeDriver={true} style={styles.header}>
                     {title}
                 </Animatable.Text>
@@ -177,7 +178,7 @@ function LoginScreen({navigation}){
                         }}
                     />
                 </Animatable.View>
-                </KeyboardAvoidingView>
+                </KeyboardAwareScrollView>
             </SafeAreaView>
             <FlashMessage 
                 position="bottom" 

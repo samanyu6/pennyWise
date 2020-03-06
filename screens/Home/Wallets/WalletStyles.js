@@ -19,24 +19,23 @@ export default styles = StyleSheet.create({
         fontSize: hp('6'),
         marginLeft: wp('5%'),
         backgroundColor: 'white'
-        // paddingTop: hp('1.5%')
     },
 
     card:{
-        height: hp('25%'),
+        height: hp('20%'),
         width: wp('90%'),
         alignSelf: 'center',
         borderRadius: wp('5%'),
         // marginRight: wp('2.5%'),
         // marginLeft: wp('2.5%'),
-        shadowColor: 'grey',
-        // shadowOpacity: 0.4,
-        // shadowOffset: { height: 5, width: 0 },
-        // shadowRadius: 10,
-        // elevation: 10,
+        // shadowColor: 'grey',
+        shadowOpacity: 0.4,
+        shadowOffset: { height: 5, width: 2 },
+        shadowRadius: 10,
+        elevation: 10,
         flexDirection: 'column',
         justifyContent: 'space-evenly',
-        marginBottom: hp('2%')
+        marginBottom: hp('4%')
     },
 
     flatList:{
@@ -57,23 +56,4 @@ export default styles = StyleSheet.create({
         fontSize: hp('4.5'),
         textAlign: 'center'
     },
-
-    detailsCard:{
-        // flex:1,
-        height: hp('50%'),
-        width: wp('90%'),
-        alignSelf: 'center',
-        borderRadius: wp('5%'),
-        marginRight: wp('5%'),
-        backgroundColor: 'gray',
-        marginLeft: wp('5%'),
-        // shadowColor: 'grey',
-        // shadowOpacity: 0.4,
-        // shadowOffset: { height: 5, width: 0 },
-        // shadowRadius: 10,
-        // elevation: 10,
-        flexDirection: 'column',
-        justifyContent: 'space-evenly',
-        marginBottom: hp('2%')
-    }
 });

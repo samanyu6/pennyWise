@@ -14,6 +14,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import BottomTab from './screens/BottomTab/BottomTab';
 import AuthForm from './screens/Auth/AuthForm/AuthForm';
 import AuthFirst  from './screens/Auth/AuthFirst/AuthFirst';
+import DetailsWallet from './screens/Home/Wallets/DetailsWallet/DetailsWallet';
 
 //Redux Stuff
 import { Provider} from 'react-redux';
@@ -52,6 +53,7 @@ const App = () => {
                       <Stack.Screen name="AuthForm" component={AuthForm}/>
                       <Stack.Screen name="AuthFirst" component={AuthFirst}/>
                       <Stack.Screen name="Home" component={BottomTab} />
+                      <Stack.Screen name="DetailsWallet" component={DetailsWallet}/>
                   </Stack.Navigator>
               </NavigationContainer>
           </Provider>

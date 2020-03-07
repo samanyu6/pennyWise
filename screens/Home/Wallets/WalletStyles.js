@@ -1,5 +1,7 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+
+const OS = Platform.OS;
 
 export default styles = StyleSheet.create({
     
@@ -16,9 +18,15 @@ export default styles = StyleSheet.create({
 
     headerText:{
         fontFamily: 'Montserrat-ExtraBoldItalic',
-        fontSize: hp('6'),
+        // fontSize: OS==='ios'?hp('7.5%'):hp('9.5%'),
+        fontSize: wp('15%'),
         marginLeft: wp('5%'),
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+    },
+
+    headerSize:{
+        height: hp('14%'), 
+        justifyContent: 'center'
     },
 
     card:{

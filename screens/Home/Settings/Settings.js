@@ -9,23 +9,23 @@ const Settings = ({
 }) => (
     <View style={styles.main}>
         <ScrollView style={styles.ScrollView}>
-        <SafeAreaView style={styles.colView}>
+            <SafeAreaView style={styles.colView}>
+                
+                <TouchableOpacity>
+                    <Text style={styles.textView}>Notifications</Text>
+                </TouchableOpacity>
+                {/* <Text style={styles.textView}></Text> */}
+                <TouchableOpacity>
+                    <Text style={styles.textView}>Backup</Text>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Text style={styles.textView}>Update Profile</Text>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Text style={styles.textView}>Logout</Text>
+                </TouchableOpacity>
             
-            <TouchableOpacity>
-                <Text style={styles.textView}>Notifications</Text>
-            </TouchableOpacity>
-            {/* <Text style={styles.textView}></Text> */}
-            <TouchableOpacity>
-                <Text style={styles.textView}>Backup</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-                <Text style={styles.textView}>Update Profile</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-                <Text style={styles.textView}>Logout</Text>
-            </TouchableOpacity>
-           
-        </SafeAreaView>
+            </SafeAreaView>
         </ScrollView>
     </View>
 );

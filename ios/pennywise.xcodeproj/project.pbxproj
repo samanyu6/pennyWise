@@ -49,9 +49,11 @@
 		C6ACF3A6AA3E4E73BEBFE520 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CAD7E3002A14AFC9B9A9BDB /* Ionicons.ttf */; };
 		C73F741824025AF10050A829 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F741724025AF10050A829 /* AppDelegate.swift */; };
 		C74F2ECD24028876001CE28B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C74F2ECC24028876001CE28B /* GoogleService-Info.plist */; };
+		C76FCAA1241BF5BA00AE7F9F /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76FCAA0241BF5BA00AE7F9F /* File.swift */; };
 		CBDF9442A0AB452CBDE47A77 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7341C743877427DA6572EF6 /* Montserrat-ExtraLight.ttf */; };
 		D2E985D8696A4CD5A5D052B3 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A99A4DD84CE64655A257D1D9 /* Fontisto.ttf */; };
 		E833BF298BAA48089FE6F9E9 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDC8D22F57DA433697299EDC /* Montserrat-Italic.ttf */; };
+		F91FDC34C5144624A40E80AB /* libWatermelonDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F58A629B9244F64BE69B621 /* libWatermelonDB.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,13 @@
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "pennywise-tvOS";
 		};
+		C76FCA9C241BF53B00AE7F9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF6D18BEBE0346AEBD925544 /* WatermelonDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6E660D5E213BCCD300189354;
+			remoteInfo = WatermelonDB;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +93,7 @@
 		165D2C1CDF6378787DC9F48D /* Pods-pennywise-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pennywise-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-pennywise-tvOSTests/Pods-pennywise-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		1CDCAE0A2495487CA54EFF1E /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		1DA014BE34BE49CDB638AC01 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-SemiBold.ttf"; path = "../assets/fonts/Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		1F58A629B9244F64BE69B621 /* libWatermelonDB.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libWatermelonDB.a; sourceTree = "<group>"; };
 		294664F254F146048BF5BE00 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* pennywise-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pennywise-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* pennywise-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pennywise-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,9 +131,11 @@
 		C73F741624025AF00050A829 /* pennywise-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pennywise-Bridging-Header.h"; sourceTree = "<group>"; };
 		C73F741724025AF10050A829 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C74F2ECC24028876001CE28B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C76FCAA0241BF5BA00AE7F9F /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		D2FDF570E0D12041B57FC5F5 /* libPods-pennywise-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pennywise-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32F1CC4DD36B8A78C2FE1E6 /* Pods-pennywise-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pennywise-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-pennywise-tvOS/Pods-pennywise-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DC5CD1C878B04E7EA6AC57CC /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		DF6D18BEBE0346AEBD925544 /* WatermelonDB.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = WatermelonDB.xcodeproj; path = "../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB.xcodeproj"; sourceTree = "<group>"; };
 		E3DA07B97F8DA454819EC771 /* Pods-pennywise-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pennywise-tvOS.release.xcconfig"; path = "Target Support Files/Pods-pennywise-tvOS/Pods-pennywise-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		E6709FA018B142ACA43179A1 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Thin.ttf"; path = "../assets/fonts/Montserrat-Thin.ttf"; sourceTree = "<group>"; };
 		EA63691C68EB4F67A5933653 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-BlackItalic.ttf"; path = "../assets/fonts/Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -149,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6376341385D80B8B145C8BB0 /* libPods-pennywise.a in Frameworks */,
+				F91FDC34C5144624A40E80AB /* libWatermelonDB.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +211,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				C73F741724025AF10050A829 /* AppDelegate.swift */,
 				C73F741624025AF00050A829 /* pennywise-Bridging-Header.h */,
+				C76FCAA0241BF5BA00AE7F9F /* File.swift */,
 			);
 			name = pennywise;
 			sourceTree = "<group>";
@@ -233,6 +247,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				DF6D18BEBE0346AEBD925544 /* WatermelonDB.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -247,6 +262,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				6D8F57AE8CF518D42F55AE3A /* Pods */,
 				94885FEE1DD64FB5B13F0D8A /* Resources */,
+				C76FCA98241BF53B00AE7F9F /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -303,6 +319,22 @@
 				B9DA01CC6CBE45308855AD47 /* Zocial.ttf */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		C76FCA98241BF53B00AE7F9F /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				1F58A629B9244F64BE69B621 /* libWatermelonDB.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		C76FCA99241BF53B00AE7F9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C76FCA9D241BF53B00AE7F9F /* libWatermelonDB.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +460,12 @@
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C76FCA99241BF53B00AE7F9F /* Products */;
+					ProjectRef = DF6D18BEBE0346AEBD925544 /* WatermelonDB.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* pennywise */,
@@ -437,6 +475,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C76FCA9D241BF53B00AE7F9F /* libWatermelonDB.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libWatermelonDB.a;
+			remoteRef = C76FCA9C241BF53B00AE7F9F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
@@ -736,6 +784,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C73F741824025AF10050A829 /* AppDelegate.swift in Sources */,
+				C76FCAA1241BF5BA00AE7F9F /* File.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -792,9 +841,17 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
+				);
 				INFOPLIST_FILE = pennywiseTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -813,9 +870,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
+				);
 				INFOPLIST_FILE = pennywiseTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -836,6 +901,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = K7M9KYV75K;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
+				);
 				INFOPLIST_FILE = pennywise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -860,6 +929,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K7M9KYV75K;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
+				);
 				INFOPLIST_FILE = pennywise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -888,8 +961,16 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
+				);
 				INFOPLIST_FILE = "pennywise-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -916,8 +997,16 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
+				);
 				INFOPLIST_FILE = "pennywise-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -943,8 +1032,16 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
+				);
 				INFOPLIST_FILE = "pennywise-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -970,8 +1067,16 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
+				);
 				INFOPLIST_FILE = "pennywise-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

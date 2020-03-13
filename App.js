@@ -21,10 +21,14 @@ import { Provider} from 'react-redux';
 import {store, persistor} from './redux/configureStore';
 import {PersistGate} from 'redux-persist/integration/react'
 import { persistStore } from 'redux-persist';
+import {database} from './Databases/index';
+import DatabaseProvider from '@nozbe/watermelondb/DatabaseProvider';
+import { Database } from '@nozbe/watermelondb';
 
 //Import actions,Reducers
 //Create Navigation
 const Stack = createStackNavigator();
+
 
 //Export main App
 const App = () => {
@@ -46,15 +50,17 @@ const App = () => {
       >
         <Provider store={store}>
               <NavigationContainer>
-                  <Stack.Navigator
-                      headerMode={false}
-                      initialRouteName = {(log==='LOGGEDOUT')?"AuthFirst":"Home"}
-                  >
-                      <Stack.Screen name="AuthForm" component={AuthForm}/>
-                      <Stack.Screen name="AuthFirst" component={AuthFirst}/>
-                      <Stack.Screen name="Home" component={BottomTab} />
-                      <Stack.Screen name="DetailsWallet" component={DetailsWallet}/>
-                  </Stack.Navigator>
+                <DatabaseProvider database={database}>
+                    <Stack.Navigator
+                        headerMode={false}
+                        initialRouteName = {(log==='LOGGEDOUT')?"AuthFirst":"Home"}
+                    >
+                        <Stack.Screen name="AuthForm" component={AuthForm}/>
+                        <Stack.Screen name="AuthFirst" component={AuthFirst}/>
+                        <Stack.Screen name="Home" component={BottomTab} />
+                        <Stack.Screen name="DetailsWallet" component={DetailsWallet}/>
+                    </Stack.Navigator>
+                  </DatabaseProvider>
               </NavigationContainer>
           </Provider>
       </PersistGate> 

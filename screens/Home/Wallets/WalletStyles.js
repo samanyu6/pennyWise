@@ -1,5 +1,7 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+
+const OS = Platform.OS;
 
 export default styles = StyleSheet.create({
     
@@ -10,37 +12,42 @@ export default styles = StyleSheet.create({
     mainView:{
         height: hp('120%'),
         marginTop: wp('2.5%'),
-        marginBottom: hp('-10%'),
+        // marginBottom: hp('-10%'),
         backgroundColor: 'white',
     },
 
     headerText:{
         fontFamily: 'Montserrat-ExtraBoldItalic',
-        fontSize: hp('6'),
+        fontSize: OS==='ios'?hp('6'):hp('8.5'),
         marginLeft: wp('5%'),
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        paddingVertical: OS==='ios'?0:hp('2%'),
     },
 
     card:{
-        height: hp('20%'),
+        height: OS==='ios'?hp('20%'):hp('25%'),
         width: wp('90%'),
         alignSelf: 'center',
         borderRadius: wp('5%'),
         // marginRight: wp('2.5%'),
         // marginLeft: wp('2.5%'),
         // shadowColor: 'grey',
-        shadowOpacity: 0.4,
-        shadowOffset: { height: 5, width: 2 },
-        shadowRadius: 10,
-        elevation: 10,
+        shadowOpacity: 0.6,
+        shadowOffset: { height: 10, width: 4 },
+        shadowRadius: 20,
+        elevation: 15,
         flexDirection: 'column',
         justifyContent: 'space-evenly',
         marginBottom: hp('4%')
     },
 
     flatList:{
-        flex:1,
-        backgroundColor: 'white',
+        backgroundColor: 'transparent',
+    },
+
+    bottomHeight:{
+        // height: hp('15%'),
+        backgroundColor: 'white'
     },
 
     cardHeader:{

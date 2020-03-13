@@ -72,8 +72,7 @@ function MyTabBar({ state, descriptors, navigation }) {
                   shadowOpacity: 0.2,
                   shadowOffset: { height: 2.5, width: 0 },
                   shadowRadius: 20,
-                  zIndex: 10
-                  // elevation: 20,
+                  elevation: 20,
                 }}
               />
             </View>

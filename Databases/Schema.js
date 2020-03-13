@@ -18,7 +18,8 @@ export const Schema = appSchema({
             name: 'expenses',
             columns:[
                 {name: 'wallet_id', type:'string'},
-                {name: 'created_at', type: 'number'},
+                {name: 'date', type:'string'},
+                // {name: 'created_at', type: 'number'},
                 {name: 'expense', type:'number'},
                 {name: 'title', type:'string'},
                 {name: 'description', type:'string'}

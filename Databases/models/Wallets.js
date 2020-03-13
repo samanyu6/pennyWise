@@ -1,4 +1,5 @@
 import { Model } from '@nozbe/watermelondb';
+import {field, action} from '@nozbe/watermelondb/decorators';
 
 export default class Wallets extends Model{
     static table = 'wallets'
@@ -11,8 +12,11 @@ export default class Wallets extends Model{
 
     @field('name') name
     @field('balance') balance
-    @readonly @date('created_at') createdAt
+    // @readonly @date('created_at') createdAt
+    @field('date') date
     @field('income') income
     @field('incomeAvail') incomeAvail
     @field('wallet_id') wallet_id
+    
 }
+

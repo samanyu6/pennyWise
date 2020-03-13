@@ -72,7 +72,8 @@ const Wallet = ({navigation}) => {
             </ScrollView>
             <ActionButton
                 icon="plus"
-                navigate="details"
+                navigate="addWallet"
+                navigation= {navigation}
             />
         </View>
     )

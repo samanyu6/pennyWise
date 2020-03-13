@@ -4,11 +4,11 @@ import Icon from 'react-native-vector-icons/Entypo';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-const ActionButton = ({icon,navigate}) => {
+const ActionButton = ({icon,navigate, navigation}) => {
 
     return(
         <View style={styles.btn}>
-            <TouchableOpacity onPress={()=> console.log(navigate)} hitSlop={{
+            <TouchableOpacity onPress={()=> navigation.navigate(navigate)} hitSlop={{
                 top: hp('2'),
                 bottom: hp('2'),
                 left: wp('2'),

@@ -35,7 +35,7 @@ export default styles = StyleSheet.create({
         shadowOpacity: 0.6,
         shadowOffset: { height: 10, width: 4 },
         shadowRadius: 20,
-        elevation: 15,
+        elevation: 20,
         flexDirection: 'column',
         justifyContent: 'space-evenly',
         marginBottom: hp('4%')

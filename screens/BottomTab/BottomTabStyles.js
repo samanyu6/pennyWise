@@ -20,7 +20,7 @@ export default styles= StyleSheet.create({
         shadowOpacity: 0.2,
         shadowOffset: { height: 2.5, width: 0 },
         shadowRadius: 20,
-        elevation: 20, 
+        elevation: 10, 
         position: 'absolute',
         top: OS==='ios'?hp('85%'):hp('80%'),
         alignSelf: 'center',

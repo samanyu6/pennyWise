@@ -2,14 +2,16 @@ import React from 'react';
 import { Text, View, StyleSheet, Platform } from 'react-native';
 import { heightPercentageToDP as hp, widthPercentageToDP as wp} from 'react-native-responsive-screen';
 import Icon from 'react-native-vector-icons/Entypo';
+import * as Animatable from 'react-native-animatable';
 
 const OS = Platform.OS;
 
 const CreateBT = ({
-    params,
+    animation,delay
 }) => {
+    console.log(animation, delay)
     return (
-        <View style={styles.bottomNav}>
+        <Animatable.View style={styles.bottomNav} animation={animation} delay={delay}>
             <View style={styles.btnView}>
                 <Icon 
                    name="chevron-down"
@@ -17,7 +19,7 @@ const CreateBT = ({
                 />
                 <Text style={styles.back}>BACK</Text>
             </View>
-        </View>
+        </Animatable.View>
     )
 }
 

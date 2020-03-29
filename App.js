@@ -21,10 +21,27 @@ import addWallet from './screens/Home/Wallets/addWallet/addWallet';
 import { Provider} from 'react-redux';
 import {store, persistor} from './redux/configureStore';
 import {PersistGate} from 'redux-persist/integration/react'
-import {database} from './Databases/index';
-import DatabaseProvider from '@nozbe/watermelondb/DatabaseProvider';
 
-//Import actions,Reducers
+//Database stuff
+import { Database } from '@nozbe/watermelondb';
+import SQLiteAdapter from "@nozbe/watermelondb/adapters/sqlite";
+import {mySchema} from './Database/Schema';
+import {dbModels} from './Database/index';
+import DatabaseProvider from '@nozbe/watermelondb/DatabaseProvider'
+
+
+//DB set up
+const adapter = new SQLiteAdapter({
+  dbName: "pennywise",
+  schema: mySchema
+});
+
+const database = new Database({
+  adapter,
+  modelClasses: dbModels,
+  actionsEnabled: true
+});
+
 //Create Navigation
 const Stack = createStackNavigator();
 
@@ -60,26 +77,26 @@ const App = () => {
           onBeforeLift={onBeforeLift}
       >
         <Provider store={store}>
+            <DatabaseProvider database={database}>
               <NavigationContainer>
-                <DatabaseProvider database={database}>
-                    <Stack.Navigator
-                        headerMode={false}
-                        initialRouteName = {(log==='LOGGEDOUT')?"AuthFirst":"Home"}
-                    >
-                        <Stack.Screen name="AuthForm" component={AuthForm}/>
-                        <Stack.Screen name="AuthFirst" component={AuthFirst}/>
-                        <Stack.Screen name="Home" component={BottomTab} />
-                        <Stack.Screen name="DetailsWallet" component={DetailsWallet}/>
-                        <Stack.Screen name="addWallet" component={addWallet} options={{
-                          transitionSpec:{
-                            open: config,
-                            close: config
-                          },
-                          cardStyleInterpolator: CardStyleInterpolators.forVerticalIOS
-                        }}/>
-                    </Stack.Navigator>
-                  </DatabaseProvider>
+                  <Stack.Navigator
+                      headerMode={false}
+                      initialRouteName = {(log==='LOGGEDOUT')?"AuthFirst":"Home"}
+                  >
+                      <Stack.Screen name="AuthForm" component={AuthForm}/>
+                      <Stack.Screen name="AuthFirst" component={AuthFirst}/>
+                      <Stack.Screen name="Home" component={BottomTab} />
+                      <Stack.Screen name="DetailsWallet" component={DetailsWallet}/>
+                      <Stack.Screen name="addWallet" component={addWallet} options={{
+                        transitionSpec:{
+                          open: config,
+                          close: config
+                        },
+                        cardStyleInterpolator: CardStyleInterpolators.forVerticalIOS
+                      }}/>
+                  </Stack.Navigator>
               </NavigationContainer>
+            </DatabaseProvider>
           </Provider>
       </PersistGate> 
     );

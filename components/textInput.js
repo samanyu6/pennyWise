@@ -1,22 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Text, View, TextInput, StyleSheet, Platform } from 'react-native';
 import { heightPercentageToDP as hp, widthPercentageToDP as wp} from 'react-native-responsive-screen';
 const OS = Platform.OS;
 
 const InputText = ({
-    placeholder,type, fsize, viewstyle
-}) => (
-    <View style={viewstyle}>
-        <Text style={styles.place}>{placeholder}</Text>
-        <TextInput
-            keyboardType={type}
-            // onChangeText = {(text)=>setUser(text)}
-            // value = {user}
-            style = {[styles.textStyle, {fontSize: fsize}]}
-            placeholderTextColor= "grey"
-        />
-    </View>
-);
+    placeholder,type, fsize, viewstyle, onChangeText
+}) => {
+
+    const [text, setText]=useState('');
+
+    return(
+        <View style={viewstyle}>
+            <Text style={styles.place}>{placeholder}</Text>
+            <TextInput
+                keyboardType={type}
+                onChangeText = {onChangeText}
+                style = {[styles.textStyle, {fontSize: fsize}]}
+                placeholderTextColor= "grey"
+            />
+        </View>
+    )
+}
 
 const styles = StyleSheet.create({
     place:{

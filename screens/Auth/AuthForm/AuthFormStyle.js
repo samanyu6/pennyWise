@@ -16,7 +16,7 @@ export default styles= StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'left',
         padding: wp('5%'),
-        fontFamily: 'Montserrat-Black'
+        fontFamily: 'Montserrat-Bold',
     },
 
     body:{

@@ -3,10 +3,10 @@ import { TouchableOpacity, StyleSheet, Text, View, ActivityIndicator } from 'rea
  
 
 export const CustomButton = (props) => {
-    const { title = 'Enter', style = {}, textStyle = {}, onPress, isLoading=false } = props;
+    const { title = 'Enter', style = {}, textStyle = {}, onPress, isLoading=false, hitSlop ,mainView} = props;
 
     return (
-            <TouchableOpacity onPress={onPress}>
+            <TouchableOpacity onPress={onPress} hitSlop={hitSlop} style={[mainView]}>
                 <View style={[styles.button, style]}>
                     {
                         (isLoading)?
@@ -42,4 +42,8 @@ const styles = StyleSheet.create({
         color: '#FFFFFF',
         textAlign: 'center',
     },
+
+    touchableOp:{
+        backgroundColor: 'green',
+    }
 });

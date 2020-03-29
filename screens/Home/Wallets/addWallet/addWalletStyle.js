@@ -8,7 +8,7 @@ export default styles = StyleSheet.create({
     } ,
 
     input:{
-        paddingVertical: hp('5%')
+        paddingVertical: OS==='ios'?hp('5%'):hp('7%')
     },
 
     headerText:{
@@ -51,7 +51,7 @@ export default styles = StyleSheet.create({
         width: wp('80%'),
         alignSelf: 'center',
         borderRadius: wp('5%'),
-        marginVertical: OS==='ios'?'5%':'12.5%',
+        marginVertical: OS==='ios'?'5%':'5%',
         // marginRight: wp('2.5%'),
         // marginLeft: wp('2.5%'),
         // shadowColor: 'grey',

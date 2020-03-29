@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import { Text, View, TouchableOpacity, ScrollView } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { Text, View, TouchableOpacity, ScrollView, ActivityIndicator } from 'react-native';
 import styles from './WalletStyles';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { FlatList } from 'react-native-gesture-handler';
 import {heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import getColor from '../../../components/randColor';
 import ActionButton from '../../../components/floatingAction';
+
 
 const data = [
     {
@@ -35,20 +36,51 @@ const data = [
 //   }
 ]
 
+
 function _renderItem(item, navigation){
+    console.log(item)
     return(
         <TouchableOpacity onPress={()=> {
                 navigation.navigate('DetailsWallet', { params: item })
         }}>
             <View style={[styles.card,{backgroundColor: item.color, shadowColor: item.color}]}>
-                <Text style={styles.cardHeader}>SBI</Text>
+                <Text style={styles.cardHeader}>{item.title}</Text>
                 <Text style={styles.cardMid}>$ 15,000</Text>
             </View>
         </TouchableOpacity>
     )
 }
 
-const Wallet = ({navigation}) => {
+const Wallet = ({ navigation }) => {
+
+    // const [loading, setLoad] = useState(true);
+    const [wallets, setWal] = useState([]);
+
+    // useEffect(()=>{
+    //     fetchWallets(database).then((wal)=>{
+    //         setWal([...wallets,wal[0]._raw]);
+    //         console.log(wallets)
+    //         setLoad(false);
+    //     });
+
+        
+    // },[])
+
+    // if(loading){
+    //     return(
+    //         <View style={{flex:1, backgroundColor: 'white'}}>
+    //             <ActivityIndicator
+    //                 size={42}
+    //                 color='black'
+    //             />
+    //              <ActionButton
+    //                 icon="plus"
+    //                 navigate="addWallet"
+    //             />
+    //         </View>
+    //     )
+    // }
+    // else{
     return (
         <View style={{flex:1, backgroundColor: 'white'}}>
             <ScrollView style={styles.flatList} 
@@ -76,7 +108,9 @@ const Wallet = ({navigation}) => {
                 navigation= {navigation}
             />
         </View>
-    )
-}
+    )}
+// }
+
+
 
 export default Wallet;

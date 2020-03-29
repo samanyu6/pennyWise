@@ -8,6 +8,7 @@ import auth from '@react-native-firebase/auth';
 import {useSelector, useDispatch} from 'react-redux';
 import styles from './AuthFormStyle';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import {heightPercentageToDP as hp , widthPercentageToDP as wp} from 'react-native-responsive-screen'
 
 
 function LoginScreen({navigation}){
@@ -188,6 +189,9 @@ function LoginScreen({navigation}){
                     fontWeight: '700',
                     fontSize: 18,
                     color: 'white'
+                }}
+                style={{
+                    height: hp('15%')
                 }}
             />
         </View>

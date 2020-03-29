@@ -10,7 +10,7 @@ export default styles= StyleSheet.create({
     },
 
     header:{
-        fontSize: hp('9'),
+        fontSize: wp('15%'),
         fontFamily: 'Montserrat-Bold',
         textAlign: 'left',
         padding: '5%'

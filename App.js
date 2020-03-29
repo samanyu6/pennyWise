@@ -5,6 +5,7 @@
  * @format
  * @flow
  */
+// "react-native": "0.61.5",
 // Navigation and stuff
 import React, { useEffect, useState } from 'react'
 import { NavigationContainer } from '@react-navigation/native';
